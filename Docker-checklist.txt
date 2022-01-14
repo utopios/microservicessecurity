@@ -1,0 +1,13 @@
+--- Conteneur démarre en Root => démarrer un conteneur avec l'option user : --user <user>
+=> Build de l'image en spécifiant un utilisateur dans le dockerfile
+=> utiliser plutot Entrypoint à la plce du CMD dans les dockerfile
+=> docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE 
+=> docker run --device=/dev/sd1:/dev/sd1:[r|w]
+
+=> docker run -v /sv_directory:/mongo_directory 
+
+=> docker run --cpus=0.1 --memory 128m --bridge=none --network=web --log-driver=<logging driver>
+
+=> docker run -v /var/run/docker.sock:/var/run/docker.sock (A ne pas faire)
+
+=> docker run --network="host"(A ne pas faire)
