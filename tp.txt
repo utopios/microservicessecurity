@@ -1,0 +1,3 @@
+-Réaliser une API en nestJs pour générer des JWT.
+-Réaliser une API protégée par JWT.
+-Déployer les deux apis dans des conteneurs.
