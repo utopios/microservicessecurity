@@ -1,0 +1,15 @@
+##service 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: first-service
+spec:
+  type: NodePort
+  selector:
+    app: first-pod
+  ports:
+    - port: 4001
+      targetPort: 4001
+      nodePort: 30001
+      name: jwt-port
