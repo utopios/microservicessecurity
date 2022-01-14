@@ -10,6 +10,8 @@ import {
   ResetPasswordScreen,
   Dashboard,
 } from './src/screens'
+import { AuthGuard } from './src/helpers/AuthGuard'
+import { Account } from './src/screens/Account'
 
 const Stack = createStackNavigator()
 const routes = {
@@ -37,6 +39,7 @@ export default function App() {
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen name="Account" component={(props) => (AuthGuard(Account, props))} />
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
