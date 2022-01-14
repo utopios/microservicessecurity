@@ -1,0 +1,10 @@
+services:
+  authorize_server:
+    image: .
+    ports:
+      - "4001:4001"
+  app_jwt:
+    image: .
+    command: node protected.js
+    ports:
+      - "4002:4002"

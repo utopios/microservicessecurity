@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     // } )
 
     //Appeler l'authorization server
-    axios.post('http://localhost:4001/authorize', {token: token}).then(res => {
+    axios.post($`http://authorize_server:4001/authorize`, {token: token}).then(res => {
         req.user = res.data.user
         next()
     }).catch(err => {
